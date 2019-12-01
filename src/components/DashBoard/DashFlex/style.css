@@ -1,0 +1,29 @@
+.headetTextTopo {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/*CSS Flax box*/
+
+.flex img {
+    max-width: 100%;
+    display: block;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flex .subtitle {
+    position: absolute;
+    margin-top: -30px;
+}
+
+.flex>div {
+    flex: 1 1 200px;
+    margin: 10px;
+    transition: 1s;
+}

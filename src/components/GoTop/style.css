@@ -1,0 +1,35 @@
+#arow-topo .arrow-top {
+    position: absolute;
+    bottom: -10px;
+    right: 7px;
+}
+
+#arow-topo .go-top {
+    position: fixed;
+    width: 23px;
+    height: 25px;
+    background: rgba(0, 0, 0, 0.1);
+    bottom: 50%;
+    right: 0px;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+}
+
+#arow-topo .go-top:hover {
+    animation-name: example;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes example {
+    0% {
+        background: #7186c74d;
+    }
+    100% {
+        background: #61a0aa;
+    }
+}

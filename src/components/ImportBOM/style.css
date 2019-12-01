@@ -1,0 +1,52 @@
+.searchRevealImg {
+	color: #cecece;
+}
+
+.inportContainer #btn-importar-bom {
+	display: none;
+}
+
+.inportContainer p {
+	color: blanchedalmond;
+}
+
+.inportContainer .btn-importar-bom {
+	-webkit-writing-mode: horizontal-tb !important;
+	width: 180px;
+	background-color: #c2cecf;
+	border: none;
+	color: rgb(0, 0, 0);
+	padding: 15px 15px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 4px 2px;
+	border-radius: 30px 10px 30px 10px;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+.inportContainer .btn-importar-bom:hover {
+	background-color: #22cdeb;
+	border-radius: 10px 30px 10px 30px;
+	color: rgb(0, 0, 0);
+}
+
+.inportContainer .btn-importar-bom {
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*Icones*/
+
+.fa-file-contract {
+	font-size: 18px;
+	padding-left: 10px;
+}
+
+.loadingBomImport{
+	position: relative;
+	top: 500px;
+}

@@ -1,0 +1,172 @@
+.body-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 285px;
+    transition: .5s;
+}
+
+.progress-container {
+    position: relative;
+    width: 640px;
+    display: flex;
+    justify-content: space-around;
+    transition: .5s;
+}
+
+.progress-container .card {
+    position: relative;
+    display: flex;
+    width: 200px;
+    height: 260px;
+    background: linear-gradient(0deg, #1b1b1b, rgb(107, 107, 107), #1b1b1b);
+    border: 1px solid #ffffff;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+/*Ultimo lugar onde mexi -------------------------------------------------------------------------*/
+.progress-container .card:hover {
+    transform: translateY(-10px);
+    background: linear-gradient(0deg, #1b1b1b, rgb(161, 161, 161), #1b1b1b);
+    box-shadow: 0 15px, 35px rgba(0, 0, 0, .5);
+    transition: 0.5s;
+}
+
+.progress-container .card::before {
+    content: 'Protheus';
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    color: rgba(0, 0, 0, 0);
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.19);
+    pointer-events: none;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.progress-container .card:hover::before {
+    content: 'Protheus';
+    left: -15px;
+    background: rgba(21, 116, 179, 0.19);
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+@media (max-width: 600px) {
+    .progress-container {
+        width: 450px;
+        display: block;
+        transition: .5s;
+    }
+    .body-progress {
+        min-height: 82vh;
+        justify-content: center;
+        align-items: center;
+        transition: .5s;
+    }
+    .progress-container .card {
+        width: 450px;
+        background: linear-gradient(0deg, #1b1b1b, rgb(64, 75, 82), #1b1b1b);
+        transition: .5s;
+    }
+}
+
+.progress-container .text {
+    position: relative;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.card:hover .text {
+    color: #22cdeb;
+}
+
+.progress-container .percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px #000;
+    background: rgb(53, 52, 52);
+    z-index: 1000;
+}
+
+.progress-container .percent .number {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.progress-container .percent .number h2 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 30px;
+    transition: 0.5s;
+}
+
+.progress-container .card:hover .percent .number h2 {
+    color: #22cdeb;
+    font-size: 25px;
+}
+
+.progress-container .percent .number h2 span {
+    font-size: 15px;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.progress-container .card:hover .percent .number h2 span {
+    font-size: 25px;
+    color: #ffd700;
+    transition: 0.5s;
+}
+
+.progress-container svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+}
+
+.progress-container svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+}
+
+.progress-container svg circle:nth-child(2) {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+.progress-container .card:nth-child(1) svg circle:nth-child(1) {
+    stroke: #22cdeb;
+}
+
+.progress-container .card:nth-child(2) svg circle:nth-child(1) {
+    stroke: #b21cc0;
+}
+
+.progress-container .card:nth-child(3) svg circle:nth-child(1) {
+    stroke: #cc5959;
+}

@@ -1,0 +1,60 @@
+/*Grid Layout*/
+
+.gridl {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    padding: 10px;
+    margin: 0 auto;
+    grid-gap: 10px;
+    margin-bottom: 100px;
+}
+
+.gridl>div:nth-child(n + 4) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.gridl>div.anuncio {
+    grid-column: 1;
+    grid-row: 2/5;
+    border-top: 10px solid tomato;
+    display: block;
+}
+
+/*Leganda!*/
+/*Estilo adicionado para todos os subtitulos do componente*/
+.gridl .subtitle {
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 15px;
+}
+/*de todos os subtitulos 4 deles vão receber*/
+.gridl>div:nth-child(n + 4) .subtitle {
+    position: absolute;
+    margin-top: 115px;
+}
+
+.gridl .subtitle-anuncio {
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 15px;
+}
+
+/*Mobile style*/
+
+@media (max-widht: 600px) {
+    .gridl {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gridl>div:nth-child(n + 4) {
+        display: block;
+    }
+    .gridl>div.anuncio {
+        grid-column: auto;
+        grid-row: auto;
+        order: -1;
+    }
+}

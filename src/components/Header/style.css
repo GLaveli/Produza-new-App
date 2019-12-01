@@ -1,0 +1,94 @@
+.header {
+    font-family: "montserrat", sans-serif;
+    height: 70px;
+    background: #34495e;
+    padding: 0 20px;
+    color: #fff;
+    
+}
+
+.logo {
+    line-height: 70px;
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: context-menu;
+    transition: 0.5s;
+}
+
+.logo:hover {
+    color: #22cdeb;
+    transition: 0.5s;
+}
+
+.menu {
+    float: right;
+    line-height: 70px;
+}
+
+.menu a {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.show-menu-btn, .hide-menu-btn {
+    transition: 0.4s;
+    font-size: 35px;
+    cursor: pointer;
+    display: none;
+}
+
+.show-menu-btn {
+    float: right;
+}
+
+.show-menu-btn i {
+    line-height: 70px;
+}
+
+.menu a:hover, .show-menu-btn:hover, .hide-menu-btn:hover {
+    color: #22cdeb
+}
+
+#chk {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+}
+
+@media screen and (max-width:1100px) {
+    .show-menu-btn, .hide-menu-btn {
+        display: block;
+        transition: 0.7s;
+    }
+    .menu {
+        position: fixed;
+        width: 35vh;
+        height: 100%;
+        background: #34495e;
+        right: -100%;
+        top: 0px;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        border-radius: 0px 0px 0px 20px;
+        z-index: 1001;
+        transition: 0.7s;
+    }
+    .menu a {
+        display: block;
+        padding: 10px;
+    }
+    .hide-menu-btn {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+    }
+    #chk:checked~.menu {
+        right: 0%;
+    }
+}
