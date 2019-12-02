@@ -33,11 +33,11 @@ class Search extends Component {
             estante: '',
             prateleira: '',
             posicao: '',
-            recebimento: false,
-            estoque: false,
-            fabrica: false,
-            cliente: false,
-            zerados: false,
+            recebimento: '',
+            estoque: '',
+            fabrica: '',
+            cliente: '',
+            zerados: '',
 
 
             feed: [],
