@@ -24,6 +24,22 @@ class Search extends Component {
             carac6: '',
             carac7: '',
             carac8: '',
+
+            dataIni: '',
+            dataFin: '',
+            id: '',
+            saldo: '',
+            local: '',
+            estante: '',
+            prateleira: '',
+            posicao: '',
+            recebimento: false,
+            estoque: false,
+            fabrica: false,
+            cliente: false,
+            zerados: false,
+
+
             feed: [],
             isLoading: false,
             isError: null,
@@ -176,35 +192,35 @@ class Search extends Component {
 
                                     <div className="label-float">
                                         <input id="carac1" placeholder=" " type="text" name="carac1" onChange={this.onInputChange} />
-                                        <label>cap</label>
+                                        <label>ex: cap</label>
                                     </div>
                                     <div className="label-float">
                                         <input id="carac2" placeholder=" " type="text" name="carac2" onChange={this.onInputChange} />
-                                        <label>res</label>
+                                        <label>ex: res</label>
                                     </div>
                                     <div className="label-float">
                                         <input id="carac3" placeholder=" " type="text" name="carac3" onChange={this.onInputChange} />
-                                        <label>10v</label>
+                                        <label>ex: 10v</label>
                                     </div>
                                     <div className="label-float">
                                         <input id="carac4" placeholder=" " type="text" name="carac4" onChange={this.onInputChange} />
-                                        <label>20%</label>
+                                        <label>ex: 20%</label>
                                     </div>
                                     <div className="label-float">
                                         <input id="carac5" placeholder=" " type="text" name="carac5" onChange={this.onInputChange} />
-                                        <label>smd</label>
+                                        <label>ex: smd</label>
                                     </div>
                                     <div className="label-float">
                                         <input id="carac6" placeholder=" " type="text" name="carac6" onChange={this.onInputChange} />
-                                        <label>cer</label>
+                                        <label>ex: cer</label>
                                     </div>
                                     <div className="label-float">
                                         <input id="carac7" placeholder=" " type="text" name="carac7" onChange={this.onInputChange} />
-                                        <label>ohm</label>
+                                        <label>ex: ohm</label>
                                     </div>
                                     <div className="label-float">
                                         <input id="carac8" placeholder=" " type="text" name="carac8" onChange={this.onInputChange} />
-                                        <label>film</label>
+                                        <label>ex: film</label>
                                     </div>
                                 </div>
                             </div>
@@ -218,22 +234,22 @@ class Search extends Component {
                                     <h3>Pesquisa de estoque:</h3>
 
                                     <div className="label-float">
-                                        <input id="dataIni" className="dataInputText" placeholder="dd/mm/AAAA" data-mask='dd/mm/yyyy' type="text" name="mpn" />
+                                        <input id="dataIni" className="dataInputText" placeholder="dd/mm/AAAA" data-mask='dd/mm/yyyy' type="text" name="dataIni" onChange={this.onInputChange} />
                                         <label className="dataInput">Data Inicial </label>
                                     </div>
 
                                     <div className="label-float">
-                                        <input id="dataFin" className="dataInputText" placeholder="dd/mm/AAAA" data-mask='dd/mm/yyyy' type="text" name="mpn" />
+                                        <input id="dataFin" className="dataInputText" placeholder="dd/mm/AAAA" data-mask='dd/mm/yyyy' type="text" name="dataFin" onChange={this.onInputChange} />
                                         <label className="dataInput">Data Final </label>
                                     </div>
 
                                     <div className="label-float">
-                                        <input id="id" placeholder=" " type="text" name="mpn" />
+                                        <input id="id" placeholder=" " type="text" name="id" onChange={this.onInputChange} />
                                         <label>ID</label>
                                     </div>
 
                                     <div className="label-float">
-                                        <input id="saldo" placeholder=" " type="text" name="mpn" />
+                                        <input id="saldo" placeholder=" " type="text" name="saldo" onChange={this.onInputChange} />
                                         <label>Saldo</label>
                                     </div>
 
@@ -241,22 +257,22 @@ class Search extends Component {
                                 <div className="form-row-caract">
                                     <h3 className="h3location">Localização:</h3>
 
-                                    <select id="local" className="dropbox" name="Local" onChange={this.onInputChange}>
+                                    <select id="local" className="dropbox" name="local" onChange={this.onInputChange}>
                                         <option value="">local</option>
                                         <option value="0">0</option>
                                         <option value="1">1</option>
                                     </select>
-                                    <select id="estante" className="dropbox" name="Estante" onChange={this.onInputChange}>
+                                    <select id="estante" className="dropbox" name="estante" onChange={this.onInputChange}>
                                         <option value="">Estante</option>
                                         <option value="0">0</option>
                                         <option value="1">1</option>
                                     </select>
-                                    <select id="prateleira" className="dropbox" name="Prateleira" onChange={this.onInputChange}>
+                                    <select id="prateleira" className="dropbox" name="prateleira" onChange={this.onInputChange}>
                                         <option value="">Prateleira</option>
                                         <option value="0">0</option>
                                         <option value="1">1</option>
                                     </select>
-                                    <select id="posicao" className="dropbox" name="Posicao" onChange={this.onInputChange}>
+                                    <select id="posicao" className="dropbox" name="posicao" onChange={this.onInputChange}>
                                         <option value="">Posição</option>
                                         <option value="0">0</option>
                                         <option value="1">1</option>
@@ -265,15 +281,15 @@ class Search extends Component {
                                 <div className="form-row-caract">
                                     <h3 id="titulo-outros">Outros:</h3>
                                     <div id="checkboxStyle">
-                                        <input className="checkbox" id="recebimento" type="checkbox" name="recebimento" onChange={this.onInputChange} />
+                                        <input className="checkbox" id="recebimento" type="checkbox" name="recebimento" value="true" onChange={this.onInputChange} />
                                         <label htmlFor="recebimento">Recebimento</label>
-                                        <input className="checkbox" id="estoque" type="checkbox" name="estoque" onChange={this.onInputChange} />
+                                        <input className="checkbox" id="estoque" type="checkbox" name="estoque" value="true" onChange={this.onInputChange} />
                                         <label htmlFor="estoque">Estoque</label>
-                                        <input className="checkbox" id="fabrica" type="checkbox" name="fabrica" onChange={this.onInputChange} />
+                                        <input className="checkbox" id="fabrica" type="checkbox" name="fabrica" value="true" onChange={this.onInputChange} />
                                         <label htmlFor="fabrica">Fabrica</label>
-                                        <input className="checkbox" id="cliente" type="checkbox" name="cliente" onChange={this.onInputChange} />
+                                        <input className="checkbox" id="cliente" type="checkbox" name="cliente" value="true" onChange={this.onInputChange} />
                                         <label htmlFor="cliente">Cliente</label>
-                                        <input className="checkbox" id="zerados" type="checkbox" name="zerados" onChange={this.onInputChange} />
+                                        <input className="checkbox" id="zerados" type="checkbox" name="zerados" value="true" onChange={this.onInputChange} />
                                         <label htmlFor="zerados">Zerados</label>
                                     </div>
                                 </div>
