@@ -1,0 +1,73 @@
+.linearProgressBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2e2e2e;
+}
+
+.linearProgressBar .container {
+    position: relative;
+    width: 500px;
+}
+
+.linearProgressBar .container h2 {
+    color: #fff;
+}
+
+.linearProgressBar .container .skills {
+    position: relative;
+    display: flex;
+    margin: 15px 0;
+    padding: 24px 10px 18px;
+    background: linear-gradient(#616161 0%, #333 10%, #222);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #000;
+    transition: 0.5s;
+}
+
+.linearProgressBar .container .skills::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(255, 255, 255, .03);
+    z-index: 10;
+}
+
+.linearProgressBar .container .skills .name {
+    position: relative;
+    width: 110px;
+    text-align: center;
+    color: #fff;
+    margin-top: -2px;
+    text-transform: uppercase;
+}
+
+.linearProgressBar .container .skills .value {
+    position: absolute;
+    left: 50%;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.linearProgressBar .container .skills .percent {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    background: #151515;
+    box-shadow: inset 0 0 10px #000;
+    overflow: hidden;
+}
+
+@keyframes progressAnimation {
+    from {
+        width: 0%;
+        background: rgb(56, 56, 56)
+    }
+}
