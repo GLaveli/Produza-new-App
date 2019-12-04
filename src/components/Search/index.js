@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ResultTable from '../ResultTable';
-import vmanage from '../../services/apiVmanage';
+import DataApi from '../../services/DataApi';
 import { notify } from '../../components/Notifications';
 import Loading from '../../components/Loading';
 
@@ -56,7 +56,7 @@ class Search extends Component {
 
         //Requisição do tipo get para uma das rotas da API
         try {
-            response = await vmanage.get('inicialSeach');
+            response = await DataApi.get('inicialSeach');
             console.log(response);
 
         } catch (err) {
@@ -133,7 +133,7 @@ class Search extends Component {
 
         let { feed, ...searchEngine } = this.state;
         try {
-            response = await vmanage.post('findbycarac', {
+            response = await DataApi.post('findbycarac', {
                 searchEngine,
             });
         } catch (err) {

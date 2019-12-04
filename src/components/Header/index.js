@@ -16,11 +16,11 @@ export default function Header() {
                 </label>
 
                 <ul className="menu">
-                    <Link to="/"> <i class="fas fa-home"></i> Home</Link> |
-                    <Link to="/stock"><i class="fas fa-search"></i> Pesquisar estoque</Link> |
-                    <Link to="/bom"><i class="fas fa-file-upload"></i> Importar BOM</Link> |
-                    <Link to="/dash"><i class="fas fa-chart-line"></i> Dash Board</Link> |
-                    <Link to="/about"><i class="fas fa-question"></i> Sobre</Link>
+                    <Link to="/"> <i className="fas fa-home"></i> Home</Link> |
+                    <Link to="/stock"><i className="fas fa-search"></i> Pesquisar estoque</Link> |
+                    <Link to="/bom"><i className="fas fa-file-upload"></i> Importar BOM</Link> |
+                    <Link to="/dash"><i className="fas fa-chart-line"></i> Dash Board</Link> |
+                    <Link to="/about"><i className="fas fa-question"></i> Sobre</Link>
 
                     <label htmlFor="chk" className="hide-menu-btn">
                         <i className="fas fa-times"></i>

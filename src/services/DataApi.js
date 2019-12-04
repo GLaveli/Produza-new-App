@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const vmanage = axios.create({
+const DataApi = axios.create({
     baseURL: "http://177.71.121.7:3001/"
 });
 
-export default vmanage;
+export default DataApi;

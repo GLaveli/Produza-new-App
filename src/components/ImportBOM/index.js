@@ -75,7 +75,7 @@ export default class importBOM extends Component {
             <div className="generalContainer">
                 <div className="inportContainer">
                     <label name="importBom" htmlFor="btn-importar-bom" className="btn-importar-bom">Importar BOM <i className="fas fa-file-contract"></i></label>
-                    <input id="upload" type="file" id="btn-importar-bom" accept=".xlsx" />
+                    <input type="file" id="btn-importar-bom" accept=".xlsx" />
                 </div>
 
                 <GoTop />

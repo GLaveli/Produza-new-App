@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-//import DashFlex from '../../components/DashBoard/DashFlex';
-//import DashGrid from '../../components/DashBoard/DashGrid';
-import CircularProgressBar from '../../components/DashBoard/CircularProgress';
+//import CircularProgressBar from '../../components/DashBoard/CircularProgress';
 import LinearProgressBar from '../../components/DashBoard/LinearProgress';
+import DataApi from '../../services/DataApi';
 
 export default class DashPage extends Component {
     constructor() {
@@ -11,11 +10,18 @@ export default class DashPage extends Component {
 
         }
     }
+
+    async componentDidMount() {
+        let response = await DataApi.get('/dashboards');
+        console.log(response);
+
+
+    }
+
     render() {
         return (
             <div>
 
-                <CircularProgressBar />
                 <LinearProgressBar />
 
             </div>

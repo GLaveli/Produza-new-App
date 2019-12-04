@@ -30,7 +30,6 @@ export default class LinearProgressBar extends Component {
 
             <div className="linearProgressBar">
                 <div className="container">
-                    <h2>% de itens no estoque</h2>
                     <div className="skills">
 
                         <span className="name">Teste</span>
@@ -40,8 +39,8 @@ export default class LinearProgressBar extends Component {
                             <span className="value">95%</span>
                         </div>
                     </div>
-                    
-                    
+
+
                 </div>
             </div>
 

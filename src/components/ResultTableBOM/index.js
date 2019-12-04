@@ -13,7 +13,7 @@ const ResultTableBOM = (props) => {
     const { resultSearch } = props;
 
     console.log(resultSearch);
-    
+
 
     return (
         <>
