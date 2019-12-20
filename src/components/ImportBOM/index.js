@@ -27,7 +27,7 @@ export default class importBOM extends Component {
 
 
     clearTable() {
-        this.setState({ arrayResultado: [] });
+        this.setState({ arrayResultado: [], isLoadin: false });
     }
 
     componentDidMount() {
@@ -39,6 +39,7 @@ export default class importBOM extends Component {
             notify();
             this.clearTable();
             this.setState({ isLoading: true });
+
             readXlsxFile(btnImportarBom.files[0], { sheet: "BOM_Completa" }).then(async (rows) => {
                 // `rows` is an array of rows. Each row being an array of cells.
                 rows.forEach((row, i) => { // varre a planilha

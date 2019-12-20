@@ -9,7 +9,7 @@ left: 0;
 width: ${props => props.width}%;
 height: 100%;
 border-radius: 10px;
-background: rgb(0, 148, 123);
+background: #00947b;
 box-shadow: inset 0 0 2px #000;
 animation: progressAnimation 2.5s ease-in-out forwards;
 `;
@@ -48,7 +48,12 @@ export default class LinearProgressBar extends Component {
                                 <span className="name">{item.dataName}</span>
                                 <div className="percent">
                                     <Progressbar width={(item.total * 100) / this.state.totaoItens}></Progressbar>
-                                    <span className="value">{(item.total * 100) / this.state.totaoItens}%</span>
+                                    {
+                                        item.total === this.state.totaoItens ?
+                                            <span className="value">{this.state.totaoItens} Itens</span>
+                                            :
+                                            <span className="value">{Math.round((item.total * 100) / this.state.totaoItens)}% - {item.total} Itens</span>
+                                    }
                                 </div>
                             </div>
                         ))

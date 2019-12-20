@@ -44,6 +44,7 @@ class Search extends Component {
             isLoading: false,
             isError: null,
         }
+        this.baseState = this.state;
         this.search = this.search.bind(this);
     }
 
@@ -124,8 +125,9 @@ class Search extends Component {
     //Inicia a psquisa quando  obotão é pressionado
     async search(e) {
         e.preventDefault();
-        this.setState({ isLoading: true });
         this.clearTable();
+        this.setState({ isLoading: true });
+
 
         if (!this.state.isError) {
             notify();
@@ -146,6 +148,7 @@ class Search extends Component {
     //Zera o conteudo do state, removendo a ultima pesquisa feita
     clearTable() {
         this.setState({ feed: [] });
+        this.setState(this.baseState);
     }
 
     render() {
