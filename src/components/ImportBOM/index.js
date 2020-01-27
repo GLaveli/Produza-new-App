@@ -18,13 +18,10 @@ export default class importBOM extends Component {
 
     }
 
-
-
     atualizaTabela = (resultadoBusca) => {
 
         this.setState({ arrayResultado: resultadoBusca });
     }
-
 
     clearTable() {
         this.setState({ arrayResultado: [], isLoadin: false });

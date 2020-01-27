@@ -57,8 +57,8 @@ class Search extends Component {
 
         //Requisição do tipo get para uma das rotas da API
         try {
-            response = await DataApi.get('inicialSeach');
-            console.log(response);
+            response = await DataApi.get('inicialsearch');
+            console.log(response.data);
 
         } catch (err) {
             this.setState({ isError: err });
