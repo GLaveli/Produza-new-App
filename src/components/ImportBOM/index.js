@@ -47,7 +47,7 @@ export default class importBOM extends Component {
                     }
                 });
 
-                await fetch('http://177.71.121.7:3001/importbom', {
+                await fetch('http://172.16.8.39:3001/importbom', {
 
                     method: 'post',
                     headers: {
@@ -59,7 +59,7 @@ export default class importBOM extends Component {
                     })
                 })
                     .then(res => res.json())
-                    .then(res => this.setState({ arrayResultado: res, isLoading: false }))
+                    .then(res => this.setState({ arrayResultado: res, isLoading: false }));
             })
 
         })

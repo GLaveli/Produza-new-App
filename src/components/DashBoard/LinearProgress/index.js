@@ -24,10 +24,7 @@ export default class LinearProgressBar extends Component {
             dataResponse: [],
             width: 100,
         }
-
-
     }
-
 
     async componentDidMount() {
         const dataVar = await DataApi.get('dashboards');
@@ -60,8 +57,6 @@ export default class LinearProgressBar extends Component {
                     }
                 </div>
             </div>
-
-
         )
     }
 }

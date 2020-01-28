@@ -12,14 +12,10 @@ const ResultTableBOM = (props) => {
 
     const { resultSearch } = props;
 
-    console.log(resultSearch);
-
-
     return (
         <>
             <div className="searchContainerBom">
                 <table className="container">
-
                     <thead>
                         <tr>
                             <th><h1>Nº</h1></th>
@@ -38,7 +34,7 @@ const ResultTableBOM = (props) => {
 
                                 <>
                                     {!item.referencia ? (
-                                        <tr>
+                                        <tr key={i}>
                                             <td >→</td>
                                             <td >{item.ipnCad}</td>
                                             <td >{item.ipnProd}</td>
