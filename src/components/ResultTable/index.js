@@ -48,10 +48,10 @@ const ResultTable = (props) => {
                                         <div className="dropdown">
                                             <button className="dropbtn"><i className="far fa-arrow-alt-circle-down"></i></button>
                                             <div className="dropdown-content">
-                                                <a href={octoUrl + item.CompName} target="_blank" rel="noopener noreferrer">Octopart</a>
-                                                <a href={findChipsUrl + item.CompName} target="_blank" rel="noopener noreferrer">FindChips</a>
-                                                <a href={lcscUrl + item.CompName} target="_blank" rel="noopener noreferrer">Lcsc</a>
-                                                <a href={kynixUrl + item.CompName + ".html"} target="_blank" rel="noopener noreferrer">Kynix</a>
+                                                <a href={octoUrl + item.mpn} target="_blank" rel="noopener noreferrer">Octopart</a>
+                                                <a href={findChipsUrl + item.mpn} target="_blank" rel="noopener noreferrer">FindChips</a>
+                                                <a href={lcscUrl + item.mpn} target="_blank" rel="noopener noreferrer">Lcsc</a>
+                                                <a href={kynixUrl + item.mpn + ".html"} target="_blank" rel="noopener noreferrer">Kynix</a>
                                             </div>
                                         </div>
                                     </td>
