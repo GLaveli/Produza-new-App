@@ -319,6 +319,12 @@
     font-weight: bold;
 }
 
+.msg .msg-text {
+    color: rgb(63, 230, 166);
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
 .loadingContainerSerach {
     position: relative;
     top: 800px;

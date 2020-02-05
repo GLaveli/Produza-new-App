@@ -43,6 +43,7 @@ class Search extends Component {
             feed: [],
             isLoading: false,
             isError: null,
+            message: null,
         }
         this.baseState = this.state;
         this.search = this.search.bind(this);
@@ -142,8 +143,13 @@ class Search extends Component {
             this.setState({ isError: err });
             console.log(this.state.isError);
         }
-        if (response)
-            this.setState({ feed: response.data, isLoading: false });
+        if (response) {
+            if (!response.data.message) {
+                this.setState({ feed: response.data, isLoading: false });
+            } else {
+                this.setState({ message: response.data.message, isLoading: false });
+            }
+        }
     }
     //Zera o conteudo do state, removendo a ultima pesquisa feita
     clearTable() {
@@ -313,7 +319,12 @@ class Search extends Component {
                             <Loading text="Protheus" />
                         </div>
                         :
-                        <ResultTable resultSerach={this.state.feed} />
+                        this.state.message ?
+                            <div className="msg">
+                                <p className="msg-text">{this.state.message}</p>
+                            </div>
+                            :
+                            <ResultTable resultSerach={this.state.feed} />
                 }
             </>
         );

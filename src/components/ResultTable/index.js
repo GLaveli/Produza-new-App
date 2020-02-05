@@ -10,6 +10,7 @@ let kynixUrl = "https://www.kynix.com/Search/";
 const ResultTable = (props) => {
 
     const { resultSerach } = props;
+
     return (
         <>
             <div className="searchContainer">
@@ -23,9 +24,6 @@ const ResultTable = (props) => {
                             <th><h1>IPN produção</h1></th>
                             <th><h1>MPN</h1></th>
                             <th><h1>Descrição</h1></th>
-                            <th><h1>Amount</h1></th>
-                            <th><h1>Used</h1></th>
-                            <th><h1>Errors</h1></th>
                             <th><h1>Total</h1></th>
                             <th><h1><i className="fas fa-coins"></i></h1></th>
                         </tr>
@@ -41,9 +39,6 @@ const ResultTable = (props) => {
                                     <td className="itemBom">{item.mpn}</td>
                                     <td className="itemBom">{item.Remark}</td>
                                     <td className="itemBom">{item.Amount}</td>
-                                    <td className="itemBom">{item.Used}</td>
-                                    <td className="itemBom">{item.Errors}</td>
-                                    <td className="itemBom">{item.Amount - item.Used - item.Errors}</td>
                                     <td className="markBOM" >
                                         <div className="dropdown">
                                             <button className="dropbtn"><i className="far fa-arrow-alt-circle-down"></i></button>
@@ -59,9 +54,6 @@ const ResultTable = (props) => {
                             ))
                         }
                         <tr className="fake-colunm">
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
                             <td>--</td>
                             <td>--</td>
                             <td>--</td>

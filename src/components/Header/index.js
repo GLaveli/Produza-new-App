@@ -21,7 +21,6 @@ export default function Header() {
                     <Link to="/bom"><i className="fas fa-file-upload"></i> Importar BOM</Link> |
                     <Link to="/dash"><i className="fas fa-chart-line"></i> Dashboard</Link> |
                     <Link to="/about"><i className="fas fa-question"></i> Sobre</Link>
-
                     <label htmlFor="chk" className="hide-menu-btn">
                         <i className="fas fa-times"></i>
                     </label>
