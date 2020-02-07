@@ -19,7 +19,6 @@ export default class importBOM extends Component {
     }
 
     atualizaTabela = (resultadoBusca) => {
-
         this.setState({ arrayResultado: resultadoBusca });
     }
 
@@ -47,7 +46,7 @@ export default class importBOM extends Component {
                     }
                 });
 
-                await fetch('http://172.16.8.39:3001/importbom', {
+                await fetch('http://localhost:3333/importbom', {
 
                     method: 'post',
                     headers: {
@@ -64,7 +63,6 @@ export default class importBOM extends Component {
 
         })
     };
-
 
     render() {
 

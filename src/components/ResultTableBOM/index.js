@@ -10,7 +10,12 @@ let kynixUrl = "https://www.kynix.com/Search/";
 
 const ResultTableBOM = (props) => {
 
+
+
     const { resultSearch } = props;
+
+    console.log(resultSearch);
+
 
     return (
         <>
@@ -34,13 +39,13 @@ const ResultTableBOM = (props) => {
 
                                 <>
                                     {!item.referencia ? (
-                                        <tr key={i}>
+                                        <tr>
                                             <td >→</td>
-                                            <td >{item.ipnCad}</td>
-                                            <td >{item.ipnProd}</td>
+                                            <td >{item.ipncadastro}</td>
+                                            <td >{item.CompName}</td>
                                             <td >{item.mpn}</td>
-                                            <td >{item.descricao}</td>
-                                            <td className="centerItens">{item.amt} <i className="fas fa-microchip"></i></td>
+                                            <td >{item.Remark}</td>
+                                            <td className="centerItens">{item.Amount} <i className="fas fa-microchip"></i></td>
                                             <td className="markBOM">
                                                 <div className="dropdown">
                                                     <button className="dropbtn"><i className="far fa-arrow-alt-circle-left"></i></button>
