@@ -46,7 +46,7 @@ export default class importBOM extends Component {
                     }
                 });
 
-                await fetch('http://localhost:3333/importbom', {
+                await fetch('http://172.16.8.39:3333/importbom', {
 
                     method: 'post',
                     headers: {
