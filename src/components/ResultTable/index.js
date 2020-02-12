@@ -18,7 +18,7 @@ const ResultTable = (props) => {
                 <table className="table">
                     <thead>
                         <tr>
-                            <th><h1>Nº</h1></th>
+                            <th><h1>!</h1></th>
                             <th><h1>ID</h1></th>
                             <th><h1>IPN Cadastro</h1></th>
                             <th><h1>IPN produção</h1></th>
@@ -32,7 +32,18 @@ const ResultTable = (props) => {
                         {
                             resultSerach.map((item, i) => (
                                 <tr key={i}>
-                                    <td className="itemBom">{i + 1}</td>
+                                    <td className="centerItens">
+                                        <div className="tooltip"><i class="fas fa-angle-double-right"></i>
+                                            <span className="tooltiptextLeft">
+                                                <i class="fas fa-arrow-right"></i> LotNo: <span className="QuantityColorMarker"> {item.LotNo}</span><hr />
+                                                <i class="fas fa-arrow-right"></i> McID: <span className="QuantityColorMarker"> {item.McID}</span><hr />
+                                                <i class="far fa-clipboard"></i> Station: <span className="QuantityColorMarker"> {item.Station}</span><hr />
+                                                <i class="fas fa-box"></i> Slot: <span className="QuantityColorMarker"> {item.Slot}</span><hr />
+                                                <i class="fas fa-boxes"></i> SubSlot: <span className="QuantityColorMarker"> {item.SubSlot}</span><hr />
+                                                <i class="fas fa-dolly"></i> Ultima Movimentação: <span className="QuantityColorMarker"> {item.UltimaMovimentacao}</span><hr />
+                                            </span>
+                                        </div>
+                                    </td>
                                     <td >{item.CompID}</td>
                                     <td className="itemBom">{item.ipncadastro}</td>
                                     <td className="itemBom">{item.CompName}</td>

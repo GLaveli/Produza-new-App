@@ -22,7 +22,7 @@ const ResultTableBOM = (props) => {
                 <table className="container">
                     <thead>
                         <tr>
-                            <th><h1>Nº</h1></th>
+                            <th><h1>!</h1></th>
                             <th><h1>ipnCad</h1></th>
                             <th><h1>ipnProd.</h1></th>
                             <th><h1>mpn</h1></th>
