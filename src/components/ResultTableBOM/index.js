@@ -16,7 +16,6 @@ const ResultTableBOM = (props) => {
 
     console.log(resultSearch);
 
-
     return (
         <>
             <div className="searchContainerBom">
@@ -36,16 +35,30 @@ const ResultTableBOM = (props) => {
                     <tbody className="tbodyBOM">
                         {
                             resultSearch.map((item, i) => (
-
                                 <>
                                     {!item.referencia ? (
                                         <tr>
-                                            <td >→</td>
+                                            <td className="centerItens">
+                                                <div className="tooltip"><i class="fas fa-angle-double-right"></i>
+                                                    <span className="tooltiptextLeft">
+                                                        <i class="fas fa-arrow-right"></i> LotNo: <span className="QuantityColorMarker"> {item.LotNo}</span><hr />
+                                                        <i class="fas fa-arrow-right"></i> McID: <span className="QuantityColorMarker"> {item.McID}</span><hr />
+                                                        <i class="far fa-clipboard"></i> Station: <span className="QuantityColorMarker"> {item.Station}</span><hr />
+                                                        <i class="fas fa-box"></i> Slot: <span className="QuantityColorMarker"> {item.Slot}</span><hr />
+                                                        <i class="fas fa-boxes"></i> SubSlot: <span className="QuantityColorMarker"> {item.SubSlot}</span><hr />
+                                                        <i class="fas fa-dolly"></i> Ultima Movimentação: <span className="QuantityColorMarker"> {item.UltimaMovimentacao}</span><hr />
+                                                    </span>
+                                                </div>
+                                            </td>
                                             <td >{item.ipncadastro}</td>
                                             <td >{item.CompName}</td>
                                             <td >{item.mpn}</td>
                                             <td >{item.Remark}</td>
-                                            <td className="centerItens">{item.Amount} <i className="fas fa-microchip"></i></td>
+                                            <td className="centerItens">
+                                                <div className="tooltip"><span className="QuantityColorMarker">{item.Amount} </span><i className="fas fa-microchip"></i>
+                                                    <span className="tooltiptextRight">Itens em Estoque</span>
+                                                </div>
+                                            </td>
                                             <td className="markBOM">
                                                 <div className="dropdown">
                                                     <button className="dropbtn"><i className="far fa-arrow-alt-circle-left"></i></button>
@@ -65,7 +78,12 @@ const ResultTableBOM = (props) => {
                                                 <td className="markBOM" >{item.ipnProd}</td>
                                                 <td className="markBOM" >{item.mpn}</td>
                                                 <td className="markBOM" >{item.descricao}</td>
-                                                <td className="markBOM">BOM</td>
+                                                <td className="markBOM">
+                                                    <div className="tooltip">BOM:  <span className="color">{item.quantidadeDeItens}</span>
+                                                        <span className="tooltiptextRight">Quantidade por PCB! </span>
+                                                    </div>
+                                                </td>
+
                                                 <td className="markBOM" >
                                                     <div className="dropdown">
                                                         <button className="dropbtn"><i className="far fa-arrow-alt-circle-left"></i></button>

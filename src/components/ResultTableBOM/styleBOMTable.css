@@ -1,5 +1,76 @@
 /*---------- CSS Tabela Don't touch my espaguete! ----------*/
 
+.QuantityColorMarker {
+    color: #22cdeb;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptextLeft {
+    visibility: hidden;
+    width: 500px;
+    background-color: black;
+    color: #fff;
+    text-align: left;
+    margin-left: 5px;
+    border-radius: 15px;
+    padding: 15px 0;
+    padding-left: 15px;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%;
+}
+
+.tooltip .tooltiptextLeft::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: -5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+}
+
+
+
+.tooltip:hover .tooltiptextLeft {
+    visibility: visible;
+}
+
+.tooltip .tooltiptextRight {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 110%;
+}
+
+.tooltip .tooltiptextRight::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+}
+
+.tooltip:hover .tooltiptextRight {
+    visibility: visible;
+}
+
 table {
     border-radius: 20px;
 }
@@ -48,11 +119,11 @@ table {
 /*Faz com que todas as linhas impares e pares da tabela tenham diferenciação na cor*/
 
 .searchContainerBom .container tr:nth-child(odd) {
-    background-color: #323C50;
+    background-color: #5c6474;
 }
 
 .searchContainerBom .container tr:nth-child(even) {
-    background-color: #2C3446;
+    background-color: #5c6474;
 }
 
 /*Deixa o primeiro item de cada linha com azul*/
@@ -78,7 +149,7 @@ table {
 /*Altera a cor dos itens que são relacionados a BOM*/
 
 .markBOM {
-    background-color: rgb(92, 100, 116);
+    background-color: #2C3446;
 }
 
 /*Icones da bom*/
