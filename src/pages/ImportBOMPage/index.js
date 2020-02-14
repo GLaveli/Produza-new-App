@@ -4,6 +4,7 @@ import GoTop from '../../components/GoTop';
 
 
 export default class ImportBOMPage extends Component {
+
     render() {
         return (
             <div>

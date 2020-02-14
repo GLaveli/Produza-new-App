@@ -14,7 +14,13 @@ const ResultTable = (props) => {
     return (
         <>
             <div className="searchContainer">
-                <h3 className="result-count">Foram retornados: {resultSerach.length} Resultados</h3>
+                {resultSerach.length === 1 ?
+                    <h3 className="result-count">Foi retornado: {resultSerach.length} Resultado</h3>
+                    : resultSerach.length <= 0 ?
+                        <h3 className="result-count">Nenhum Resultado Encontrado</h3>
+                        :
+                        <h3 className="result-count">Foi retornado: {resultSerach.length} Resultados</h3>
+                }
                 <table className="table">
                     <thead>
                         <tr>
@@ -33,14 +39,14 @@ const ResultTable = (props) => {
                             resultSerach.map((item, i) => (
                                 <tr key={i}>
                                     <td className="centerItens">
-                                        <div className="tooltip"><i class="fas fa-angle-double-right"></i>
+                                        <div className="tooltip"><i className="fas fa-angle-double-right"></i>
                                             <span className="tooltiptextLeft">
-                                                <i class="fas fa-arrow-right"></i> LotNo: <span className="QuantityColorMarker"> {item.LotNo}</span><hr />
-                                                <i class="fas fa-arrow-right"></i> McID: <span className="QuantityColorMarker"> {item.McID}</span><hr />
-                                                <i class="far fa-clipboard"></i> Station: <span className="QuantityColorMarker"> {item.Station}</span><hr />
-                                                <i class="fas fa-box"></i> Slot: <span className="QuantityColorMarker"> {item.Slot}</span><hr />
-                                                <i class="fas fa-boxes"></i> SubSlot: <span className="QuantityColorMarker"> {item.SubSlot}</span><hr />
-                                                <i class="fas fa-dolly"></i> Ultima Movimentação: <span className="QuantityColorMarker"> {item.UltimaMovimentacao}</span><hr />
+                                                <i className="fas fa-arrow-right"></i> LotNo: <span className="QuantityColorMarker"> {item.LotNo}</span><hr />
+                                                <i className="fas fa-arrow-right"></i> McID: <span className="QuantityColorMarker"> {item.McID}</span><hr />
+                                                <i className="far fa-clipboard"></i> Station: <span className="QuantityColorMarker"> {item.Station}</span><hr />
+                                                <i className="fas fa-box"></i> Slot: <span className="QuantityColorMarker"> {item.Slot}</span><hr />
+                                                <i className="fas fa-boxes"></i> SubSlot: <span className="QuantityColorMarker"> {item.SubSlot}</span><hr />
+                                                <i className="fas fa-dolly"></i> Ultima Movimentação: <span className="QuantityColorMarker"> {item.UltimaMovimentacao}</span><hr />
                                             </span>
                                         </div>
                                     </td>
@@ -52,7 +58,7 @@ const ResultTable = (props) => {
                                     <td className="itemBom">{item.Amount}</td>
                                     <td className="markBOM" >
                                         <div className="dropdown">
-                                            <button className="dropbtn"><i className="far fa-arrow-alt-circle-down"></i></button>
+                                            <button className="dropbtn"><i className="far fa-arrow-alt-circle-left"></i></button>
                                             <div className="dropdown-content">
                                                 <a href={octoUrl + item.mpn} target="_blank" rel="noopener noreferrer">Octopart</a>
                                                 <a href={findChipsUrl + item.mpn} target="_blank" rel="noopener noreferrer">FindChips</a>
@@ -75,12 +81,9 @@ const ResultTable = (props) => {
                             <td>--</td>
                         </tr>
                     </tbody>
-
-
                 </table>
             </div>
         </>
-
     );
 }
 

@@ -7,14 +7,9 @@ let findChipsUrl = "https://www.findchips.com/search/";
 let lcscUrl = "https://lcsc.com/search?q=";
 let kynixUrl = "https://www.kynix.com/Search/";
 
-
 const ResultTableBOM = (props) => {
 
-
-
     const { resultSearch } = props;
-
-    console.log(resultSearch);
 
     return (
         <>
@@ -32,9 +27,9 @@ const ResultTableBOM = (props) => {
                         </tr>
                     </thead>
 
-                    <tbody className="tbodyBOM">
+                    <tbody >
                         {
-                            resultSearch.map((item, i) => (
+                            resultSearch.map((item) => (
                                 <>
                                     {!item.referencia ? (
                                         <tr>

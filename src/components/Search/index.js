@@ -162,7 +162,7 @@ class Search extends Component {
             <>
                 <div className="container-btn-tab">
                     <button className="btn-tab btn1" onClick={(e) => this.showForm('tab1')}>Cadastro</button>
-                    <button className="btn-tab btn2" onClick={(e) => this.showForm('tab2')}>Estoque</button>
+                    <button className="btn-tab btn2" onClick={(e) => this.showForm('tab2')} disabled>{/*Estoque*/}</button>
                     <button className="btn-tab btn3" onClick={(e) => this.showForm('clear')}>Limpar campos</button>
                 </div>
                 <form id="myform" className="form" >
@@ -319,12 +319,7 @@ class Search extends Component {
                             <Loading text="Protheus" />
                         </div>
                         :
-                        this.state.message ?
-                            <div className="msg">
-                                <p className="msg-text">{this.state.message}</p>
-                            </div>
-                            :
-                            <ResultTable resultSerach={this.state.feed} />
+                        <ResultTable resultSerach={this.state.feed} />
                 }
             </>
         );
