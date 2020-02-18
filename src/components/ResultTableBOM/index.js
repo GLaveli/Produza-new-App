@@ -6,6 +6,7 @@ let octoUrl = "https://octopart.com/search?q=";
 let findChipsUrl = "https://www.findchips.com/search/";
 let lcscUrl = "https://lcsc.com/search?q=";
 let kynixUrl = "https://www.kynix.com/Search/";
+let digikey = "https://www.digikey.com/products/en?keywords=";
 
 const ResultTableBOM = (props) => {
 
@@ -17,7 +18,7 @@ const ResultTableBOM = (props) => {
                 <table className="container">
                     <thead>
                         <tr>
-                            <th><h1>!</h1></th>
+                            <th><h1><i class="fas fa-info-circle"></i></h1></th>
                             <th><h1>ipnCad</h1></th>
                             <th><h1>ipnProd.</h1></th>
                             <th><h1>mpn</h1></th>
@@ -34,7 +35,7 @@ const ResultTableBOM = (props) => {
                                     {!item.referencia ? (
                                         <tr>
                                             <td className="centerItens">
-                                                <div className="tooltip"><i class="fas fa-angle-double-right"></i>
+                                                <div className="tooltip"><i class="far fa-eye"></i>
                                                     <span className="tooltiptextLeft">
                                                         <i class="fas fa-arrow-right"></i> LotNo: <span className="QuantityColorMarker"> {item.LotNo}</span><hr />
                                                         <i class="fas fa-arrow-right"></i> McID: <span className="QuantityColorMarker"> {item.McID}</span><hr />
@@ -56,8 +57,9 @@ const ResultTableBOM = (props) => {
                                             </td>
                                             <td className="markBOM">
                                                 <div className="dropdown">
-                                                    <button className="dropbtn"><i className="far fa-arrow-alt-circle-left"></i></button>
+                                                    <button className="dropbtn"><i class="fas fa-search"></i></button>
                                                     <div className="dropdown-content">
+                                                        <a href={digikey + item.mpn} target="_blank" rel="noopener noreferrer">Digikey</a>
                                                         <a href={octoUrl + item.mpn} target="_blank" rel="noopener noreferrer">Octopart</a>
                                                         <a href={findChipsUrl + item.mpn} target="_blank" rel="noopener noreferrer">FindChips</a>
                                                         <a href={lcscUrl + item.mpn} target="_blank" rel="noopener noreferrer">Lcsc</a>
@@ -81,8 +83,9 @@ const ResultTableBOM = (props) => {
 
                                                 <td className="markBOM" >
                                                     <div className="dropdown">
-                                                        <button className="dropbtn"><i className="far fa-arrow-alt-circle-left"></i></button>
+                                                        <button className="dropbtn"><i class="fas fa-search"></i></button>
                                                         <div className="dropdown-content">
+                                                            <a href={digikey + item.mpn} target="_blank" rel="noopener noreferrer">Digikey</a>
                                                             <a href={octoUrl + item.mpn} target="_blank" rel="noopener noreferrer">Octopart</a>
                                                             <a href={findChipsUrl + item.mpn} target="_blank" rel="noopener noreferrer">FindChips</a>
                                                             <a href={lcscUrl + item.mpn} target="_blank" rel="noopener noreferrer">Lcsc</a>

@@ -51,6 +51,7 @@ class Search extends Component {
 
     //Carrega informaçoes do banco de dados enquanto os componentes são montados
     async componentDidMount() {
+
         this.setState({ isLoading: true });
         //Define qual bloco deve aparecer primeiro
         document.getElementById('tab1').style.display = "block";

@@ -9,6 +9,27 @@
     display: inline-block;
 }
 
+.tooltip .tooltipTextLeftInfo {
+    visibility: hidden;
+    align-items: center;
+    align-content: center;
+    width: 180px;
+    margin-top: -20px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    margin-left: -135px;
+    border-radius: 15px;
+    padding: 0px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+}
+
+.tooltip:hover .tooltipTextLeftInfo {
+    visibility: visible;
+}
+
 .tooltip .tooltiptextLeft {
     visibility: hidden;
     width: 415px;
@@ -22,7 +43,7 @@
     position: absolute;
     z-index: 1;
     top: -5px;
-    left: 0%;
+    left: 10px;
 }
 
 .tooltip .tooltiptextLeft::after {
