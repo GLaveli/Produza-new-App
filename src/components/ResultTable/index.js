@@ -16,11 +16,11 @@ const ResultTable = (props) => {
         <>
             <div className="searchContainer">
                 {resultSerach.length === 1 ?
-                    <h3 className="result-count">Foi retornado: {resultSerach.length} Resultado</h3>
+                    <h3 className="result-count">Foi retornado: <span className="countNumberResult">{resultSerach.length} </span>Resultado</h3>
                     : resultSerach.length <= 0 ?
                         <h3 className="result-count">Nenhum Resultado Encontrado</h3>
                         :
-                        <h3 className="result-count">Foi retornado: {resultSerach.length} Resultados</h3>
+                        <h3 className="result-count">Foi retornado: <span className="countNumberResult">{resultSerach.length} </span> Resultados</h3>
                 }
 
                 <table className="table">

@@ -98,19 +98,16 @@ class Search extends Component {
             document.getElementById('carac6').value = '';
             document.getElementById('carac7').value = '';
             document.getElementById('carac8').value = '';
-            /*Itens que futuramente podem ser utilizados 
-            Section 2 inputs 
+            /* Section 2 inputs*/
             document.getElementById('dataIni').value = '';
             document.getElementById('dataFin').value = '';
             document.getElementById('id').value = '';
             document.getElementById('saldo').value = '';
-            */
-            /* Section 3 selection 
+            /* Section 3 selection */
             document.getElementById("local").selectedIndex = 0;
             document.getElementById("estante").selectedIndex = 0;
             document.getElementById("prateleira").selectedIndex = 0;
             document.getElementById("posicao").selectedIndex = 0;
-            */
             /*Section 3 checkbox*/
             document.getElementById("recebimento").checked = false;
             document.getElementById("estoque").checked = false;
@@ -198,30 +195,7 @@ class Search extends Component {
                                         <label>Descrição</label>
                                     </div>
 
-
                                 </div>
-                                <div className="form-row-caract">
-                                    <h3 id="titulo-outros">Outros:</h3>
-                                    <div id="checkboxStyle">
-                                        <input className="checkbox" id="recebimento" type="checkbox" name="recebimento" value="true" onChange={this.onInputChange} />
-                                        <label htmlFor="recebimento">Recebimento</label>
-                                        <input className="checkbox" id="estoque" type="checkbox" name="estoque" value="true" onChange={this.onInputChange} />
-                                        <label htmlFor="estoque">Estoque</label>
-                                        <input className="checkbox" id="fabrica" type="checkbox" name="fabrica" value="true" onChange={this.onInputChange} />
-                                        <label htmlFor="fabrica">Fabrica</label>
-                                        <input className="checkbox" id="cliente" type="checkbox" name="cliente" value="true" onChange={this.onInputChange} />
-                                        <label htmlFor="cliente">Cliente</label>
-                                        <input className="checkbox" id="zerados" type="checkbox" name="zerados" value="true" onChange={this.onInputChange} />
-                                        <label htmlFor="zerados">Zerados</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="tab2">
-                        <div className="body" id="form-body">
-                            <div className="cadastro">
                                 <div className="form-row-caract">
 
                                     <h3>Caracteristicas:</h3>
@@ -257,6 +231,76 @@ class Search extends Component {
                                     <div className="label-float">
                                         <input id="carac8" placeholder=" " type="text" name="carac8" onChange={this.onInputChange} />
                                         <label>ex: film</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tab2">
+                        <div className="body" id="form-body">
+                            <div className="cadastro">
+                                <div className="form-row">
+                                    <h3>Pesquisa de estoque:</h3>
+
+                                    <div className="label-float">
+                                        <input id="dataIni" className="dataInputText" placeholder="dd/mm/AAAA" data-mask='dd/mm/yyyy' type="text" name="dataIni" onChange={this.onInputChange} />
+                                        <label className="dataInput">Data Inicial </label>
+                                    </div>
+
+                                    <div className="label-float">
+                                        <input id="dataFin" className="dataInputText" placeholder="dd/mm/AAAA" data-mask='dd/mm/yyyy' type="text" name="dataFin" onChange={this.onInputChange} />
+                                        <label className="dataInput">Data Final </label>
+                                    </div>
+
+                                    <div className="label-float">
+                                        <input id="id" placeholder=" " type="text" name="id" onChange={this.onInputChange} />
+                                        <label>ID</label>
+                                    </div>
+
+                                    <div className="label-float">
+                                        <input id="saldo" placeholder=" " type="text" name="saldo" onChange={this.onInputChange} />
+                                        <label>Saldo</label>
+                                    </div>
+
+                                </div>
+                                <div className="form-row-caract">
+                                    <h3 className="h3location">Localização:</h3>
+
+                                    <select id="local" className="dropbox" name="local" onChange={this.onInputChange}>
+                                        <option value="">local</option>
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                    </select>
+                                    <select id="estante" className="dropbox" name="estante" onChange={this.onInputChange}>
+                                        <option value="">Estante</option>
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                    </select>
+                                    <select id="prateleira" className="dropbox" name="prateleira" onChange={this.onInputChange}>
+                                        <option value="">Prateleira</option>
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                    </select>
+                                    <select id="posicao" className="dropbox" name="posicao" onChange={this.onInputChange}>
+                                        <option value="">Posição</option>
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                    </select>
+                                </div>
+                                <div className="form-row-caract">
+                                    <h3 id="titulo-outros">Outros:</h3>
+                                    <div id="checkboxStyle">
+                                        <input className="checkbox" id="recebimento" type="checkbox" name="recebimento" value="true" onChange={this.onInputChange} />
+                                        <label htmlFor="recebimento">Recebimento</label>
+                                        <input className="checkbox" id="estoque" type="checkbox" name="estoque" value="true" onChange={this.onInputChange} />
+                                        <label htmlFor="estoque">Estoque</label>
+                                        <input className="checkbox" id="fabrica" type="checkbox" name="fabrica" value="true" onChange={this.onInputChange} />
+                                        <label htmlFor="fabrica">Fabrica</label>
+                                        <input className="checkbox" id="cliente" type="checkbox" name="cliente" value="true" onChange={this.onInputChange} />
+                                        <label htmlFor="cliente">Cliente</label>
+                                        <input className="checkbox" id="zerados" type="checkbox" name="zerados" value="true" onChange={this.onInputChange} />
+                                        <label htmlFor="zerados">Zerados</label>
                                     </div>
                                 </div>
                             </div>
